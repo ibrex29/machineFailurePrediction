@@ -1,0 +1,39 @@
+<div id="predict" style="
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    padding: 40px; 
+    background: linear-gradient(135deg, #007bff, #00d4ff); 
+    border-radius: 12px; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    width: 90%; 
+    max-width: 500px; 
+    margin: auto;
+    color: white;">
+
+    <h2 style="font-size: 26px; margin-bottom: 20px;">🔧 Predict Machine Failure & Type</h2>
+
+    <form action="{{ url_for('predict') }}" method="POST" style="width: 100%;">
+      
+      {% for field, label, placeholder in [
+        ('temperature', 'Air Temperature (K):', '295-305'),
+        ('process_temperature', 'Process Temperature (K):', '305-314'),
+        ('torque', 'Torque (Nm):', '3-77'),
+        ('tool_wear', 'Tool Wear (minutes):', '0-253')
+      ] %}
+      <div class="form-group" style="margin-bottom: 15px;">
+        <label for="{{ field }}" style="display: block; font-weight: bold; margin-bottom: 8px;">{{ label }}</label>
+        <input type="number" step="0.1" id="{{ field }}" name="{{ field }}" placeholder="{{ placeholder }}" required 
+        value="{{ request.form.get(field, '') }}"
+        style="width: 100%; padding: 12px; border: none; border-radius: 8px; font-size: 16px; background: white; color: black; box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);">
+      </div>
+      {% endfor %}
+
+      <button type="submit" 
+      style="width: 100%; padding: 14px; background: #ff6600; color: white; font-size: 18px; font-weight: bold; border: none; border-radius: 8px; cursor: pointer; transition: background 0.3s, transform 0.2s;">
+        🚀 Predict
+      </button>
+    </form>
+</div>

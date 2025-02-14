@@ -1,0 +1,73 @@
+<div class="result-section">
+    <div class="failure-heading">
+        <h3>Machine Failure &raquo;</h3>
+        <div class="status-indicator">
+          <span class="circle hollow-green{% if failure_prediction == 0 %} filled-green{% endif %}" 
+                title="No Failure Predicted"></span>
+          <span class="circle hollow-red{% if failure_prediction == 1 %} filled-red{% endif %}" 
+                title="Failure Predicted"></span>
+        </div>
+      </div>
+      
+      <style>
+        .failure-heading {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+      
+        .status-indicator {
+          display: flex;
+          gap: 5px;
+        }
+      
+        .circle {
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          display: inline-block;
+          border: 2px solid;
+        }
+      
+        .hollow-green {
+          border-color: green;
+        }
+      
+        .filled-green {
+          background-color: green;
+        }
+      
+        .hollow-red {
+          border-color: red;
+        }
+      
+        .filled-red {
+          background-color: red;
+        }
+      </style>
+      
+  
+    <div class="failure-cards">
+      <div class="card{% if failure_prediction == 1 and type_prediction == 1 %} active{% endif %}">
+        <h3>Tool Wear Failure (TWF)</h3>
+        <img src="{{ url_for('static', filename='images/tool-wear.png') }}" alt="TWF">
+      </div>
+      <div class="card{% if failure_prediction == 1 and type_prediction == 2 %} active{% endif %}">
+        <h3>Heat Dissipation Failure (HDF)</h3>
+        <img src="{{ url_for('static', filename='images/heat.png') }}" alt="HDF">
+      </div>
+      <div class="card{% if failure_prediction == 1 and type_prediction == 3 %} active{% endif %}">
+        <h3>Power Failure (PWF)</h3>
+        <img src="{{ url_for('static', filename='images/power.png') }}" alt="PWF">
+      </div>
+      <div class="card{% if failure_prediction == 1 and type_prediction == 4 %} active{% endif %}">
+        <h3>Overstrain Failure (OSF)</h3>
+        <img src="{{ url_for('static', filename='images/overstrain.png') }}" alt="OSF">
+      </div>
+      <div class="card{% if failure_prediction == 1 and type_prediction == 5 %} active{% endif %}">
+        <h3>Random Failure (RNF)</h3>
+        <img src="{{ url_for('static', filename='images/random.png') }}" alt="RNF">
+      </div>
+    </div>
+  </div>
+  
