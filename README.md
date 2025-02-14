@@ -2,9 +2,6 @@
 
 ## Introduction
 
-Repository for Machine learning's semester project - Machine failure and failure type prediction using sophisticated Neural Network (NN) model.
-This Repository is dedicated for my Machine Learning's semester project which is a machine failure prediction model made using sophisticated Neural Network (NN) models. It also caters the prediction of failure type. I have realized the model using a frontend made using Flask. It takes in certain inputs and predicts machine failure and type of the failure. It's designed to help maintenance teams in industries predict potential machine failures, ensuring proactive maintenance and reducing downtime.
-
 ## Features
 
 - **Predictive Analysis**: Uses historical machine data to predict future failures.
