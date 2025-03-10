@@ -1,8 +1,9 @@
 <div style="
     position: relative;
     width: 100%;
-    height: 400px;
+    height: auto;
     display: flex;
+    flex-direction: column; /* Changed from row to column */
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -17,20 +18,23 @@
          alt="Hero Image" 
          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.3;">
     
+   
+
     <div style="
         position: relative;
         z-index: 1;
         max-width: 600px;
         background: rgba(0, 0, 0, 0.5);
         padding: 20px;
-        border-radius: 12px;">
-        
+        border-radius: 12px;
+        margin-bottom: 20px;">
+    
         <h1 style="font-size: 28px; font-weight: bold; margin-bottom: 10px;">🔍 Predict Machine Failure Before It Happens</h1>
-        
+    
         <p style="font-size: 18px; line-height: 1.5; margin-bottom: 20px;">
             Get ahead of costly breakdowns! Enter key machine parameters and predict failures before they occur.
         </p>
-        
+    
         <a href="#predict" style="
             display: inline-block;
             padding: 12px 24px;
@@ -44,4 +48,74 @@
             🚀 Get Started
         </a>
     </div>
+
+    <div style="
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 80%;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 12px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 20px;
+    color: white;
+    text-align: left;">
+    
+    <h2 style="font-size: 16x; font-weight: bold; ">Description</h2>
+
+    <p style="font-size: 14px; line-height:  1.5; justify-content: center; text-justify: distribute; max-width: 60%; margin-bottom: 4px;">
+        This system predicts machine failures and classifies failure types in manufacturing environments. By analyzing key parameters like temperature, torque, and tool wear, it helps prevent unexpected breakdowns, optimize maintenance schedules, and reduce downtime.
+    </p>
+
+    <h2 style="font-size: 16px; font-weight: bold; margin-bottom: 4px;">How to Use the System:</h2>
+    
+    <h3 style="font-size: 14px; font-weight: bold; margin-bottom: 2px;">1. Input Machine Data</h3>
+    <ul style="font-size: 12px; line-height: 1.6; padding-left: 20px;">
+        <li>Navigate to the <strong>Machine Failure Prediction</strong> section.</li>
+        <li>Enter the required parameters:</li>
+        <ul>
+            <li><strong>Air Temperature (K):</strong> Current air temperature in Kelvin.</li>
+            <li><strong>Process Temperature (K):</strong> Operating process temperature.</li>
+            <li><strong>Torque (Nm):</strong> Torque value in Newton meters.</li>
+            <li><strong>Tool Wear (minutes):</strong> Tool wear duration in minutes.</li>
+        </ul>
+        <li>Ensure all values are within the recommended range.</li>
+    </ul>
+
+    <h3 style="font-size: 14px; font-weight: bold; margin-bottom: 2px;">2. Submit for Prediction</h3>
+    <ul style="font-size: 12px; line-height: 1.6; padding-left: 20px;">
+        <li>Click the <strong>Predict</strong> button to analyze the input data.</li>
+        <li>The system will process the information and provide results, indicating:</li>
+        <ul>
+            <li>Whether the machine is likely to fail.</li>
+            <li>The type of failure, if applicable (e.g., Overheating, Power Failure, Wear & Tear).</li>
+        </ul>
+    </ul>
+
+    <h3 style="font-size: 14px; font-weight: bold; margin-bottom: 2px;">3. Interpret the Results</h3>
+    <ul style="font-size: 14px; line-height: 1.6; padding-left: 20px;">
+        <li><strong>No failure detected:</strong> The machine is operating normally.</li>
+        <li><strong>Failure predicted:</strong> Check the failure type and take necessary maintenance actions.</li>
+    </ul>
+
+    <h2 style="font-size: 16px; font-weight: bold; margin-bottom: 4px;">Benefits of the System:</h2>
+    <ul style="font-size: 12px; line-height: 1.6; padding-left: 20px;">
+        <li><strong>Early Failure Detection:</strong> Reduces sudden breakdowns and production losses.</li>
+        <li><strong>Optimized Maintenance:</strong> Helps in planning maintenance activities efficiently.</li>
+        <li><strong>Increased Equipment Lifespan:</strong> Preventive measures extend the longevity of machines.</li>
+        <li><strong>Cost Reduction:</strong> Saves maintenance costs by addressing failures before they occur.</li>
+    </ul>
+
+    <p style="font-size: 12px; line-height: 1.5; margin-top: 5px;">
+        By integrating machine learning into predictive maintenance, this system enhances industrial efficiency and ensures smooth operations.
+    </p>
+</div>
+
+    
+   
+</div>
 </div>

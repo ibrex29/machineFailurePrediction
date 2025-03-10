@@ -46,7 +46,17 @@
         }
       </style>
       
-  
+      {% if failure_prediction == 1 %}
+      <h2 class="prediction-title">
+          Prediction Result: 
+          {% if type_prediction == 1 %} Tool Wear Failure (TWF) {% endif %}
+          {% if type_prediction == 2 %} Heat Dissipation Failure (HDF) {% endif %}
+          {% if type_prediction == 3 %} Power Failure (PWF) {% endif %}
+          {% if type_prediction == 4 %} Overstrain Failure (OSF) {% endif %}
+          {% if type_prediction == 5 %} Random Failure (RNF) {% endif %}
+      </h2>
+    {% endif %}
+
     <div class="failure-cards">
       <div class="card{% if failure_prediction == 1 and type_prediction == 1 %} active{% endif %}">
         <h3>Tool Wear Failure (TWF)</h3>
